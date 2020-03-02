@@ -1,0 +1,25 @@
+UMA version history
+
+1.9 (7/21/04) Minor changes to correct a PHDsec format change.
+
+1.8a (10/17/02) Have used the original code to build a graphical interface with Perl/Tk. A crude chart lets you see the effect of variable changes right away, and should make "tuning" of results go more smoothly.
+
+1.7 (2/8/02) First significant revision of the code in a while. Added two new values to the calculations, "gap penalty" and "gap similarity." Through a coding mistake, in the sequence comparison, gaps were set to zero, rather than to the values given in what might be the gap-to-aa standard values in the BLOSUM tables at EMBL. "Gap similarity" is the gap-to-gap value. This drastically improves the UMA scores for A parasiticus HexS, and I'll be testing these.
+
+1.6 (2/5/02) Added some code to print out the amino acid num (AANUM) in the output file, in addition to the regular alignment position number. This will make searching for specific regions of the sequence easier. Also, the comparative table now gives an average final value score in the last column of the table.
+
+1.5 (1/?/02) Fixed a simple problem with reading in the blosum matrix - now allows them to be tab delimited, rather than only space delimited. 
+
+1.4 (11/6/01) Have added the option to output a comparative table of the final results for each sequence. Output is a tab-delimited table with the name set in the "comparative table=" switch in input.txt. Leave it blank if you don't want this file.
+
+1.3 (7/30/01) Have added the "remove negatives" option. If a prediction value dips into negatives, uma2 changes them to zeroes. 
+(NB - added 10/3/01: Probably not at all useful.)
+
+1.2 (7/9/2001) Added quick algorithm to normalize the final smoothed data. Will make automation of selection of linker regions easier when we finally implement that.
+
+1.1 (6/11/2001) Addition of "output one sequence" flag in input.txt. Allows for the output of data for only one sequence. Calculations are still performed for all sequences, so this isn't optimized code. The sequence specified in input.txt must match part of at least one of the sequences read from the alignment file or the program will die. But by this means you can specify more than one sequence for output (ie all "Apara" sequences, etc.)
+
+Also placed settings data to output at the start of the the output file, rather than the end.
+
+
+1.0 First working version. Pasted into lab notebook.

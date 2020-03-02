@@ -1,0 +1,42 @@
+Files:
+input file=sequence.pir
+output file=sequence.out
+similarity weighting file=blosum62.dat
+secondary structure file=SS.txt
+output one sequence=Ec
+comparative table=sequence.cmp
+
+Values:
+verbose=yes
+gap penalty=-4
+gap similarity=0
+ss confidence values=yes
+bscore smoothing number=1
+sscore smoothing number=1
+hydrophobicity smoothing number=1
+final smoothing number=20
+bscore weighting=1
+sscore weighting=1
+hscore weighting=1
+normalize=no
+remove gaps=no
+remove negatives=no
+
+Secondary structure similarity matrix:
+helix to helix=4
+helix to sheet=-15
+helix to loop=-4
+sheet to sheet=8
+sheet to loop=-4
+loop to loop=4
+helix to none=-2
+sheet to none=-2
+loop to none=-1
+none to none=-1
+helix to dash=-1
+sheet to dash=-1
+loop to dash=-1
+dash to dash=-1
+none to dash=-1
+
+
